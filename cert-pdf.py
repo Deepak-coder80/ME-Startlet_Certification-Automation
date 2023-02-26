@@ -52,7 +52,7 @@ def createpdf(name):
     new_pdf = PdfReader(packet)
 
     # get the template - change the file name here
-    template_pdf = PdfReader(open("./Template/certificatesample.pdf","rb"))
+    template_pdf = PdfReader(open("./Template/certificate.pdf","rb"))
 
     output = PdfWriter()
 
@@ -78,15 +78,15 @@ if __name__ == "__main__":
     # for generating one file
     createpdf("NAME GOES HERE")
 
-    # for generating file from csv - replace link to csv file
-    # with open('link to csv', 'r') as readFile:
+    #for generating file from csv - replace link to csv file
+    # with open('./list.csv', 'r') as readFile:
     #     reader = csv.reader(readFile)
-    #     l = 0
+    #     l = 1
     #     for i, row in enumerate(reader):
     #         print("###############Processing", i, "################")
     #         if l != 0:
-    #             name = row[0]
-    #
+    #             name = row[1]
+    
     #             if name:
     #                 createpdf(name)
     #         l = l + 1
